@@ -1,6 +1,6 @@
 # butiq-admin
 
-> Admin module for butiq
+> Admin module for project butiq
 
 ## Build Setup
 
