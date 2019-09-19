@@ -12,9 +12,11 @@
 			<div>
 				<v-layout row wrap>
 					<v-flex xs10 sm10 md10 lg10>
-						<UserProfile />
+						<v-subheader>&emsp;
+            <v-avatar color = "indigo" size= "48"></v-avatar>&emsp;
+             Name</v-subheader>
 					</v-flex>
-
+          
 					<v-flex xs2 sm2 lg2 md2>
 						<v-list>
 							<v-list-tile-action>
@@ -29,6 +31,7 @@
 					</v-flex>
 				</v-layout>
 			</div>
+      <br>
 			<hr>
       		<v-list>
 				<v-list-item
@@ -99,6 +102,28 @@ export default {
         //   title: 'Inspire',
         //   to: '/inspire'
         // }
+
+            {
+              title : 'Configure',
+              to : '/'
+              
+            },
+            {
+              title : 'Category',
+              to : '/'
+            },
+            {
+              title : 'Products',
+              to : '/'
+            },
+            {
+              title : 'Users',
+              to : '/'
+            },
+            {
+              title : 'Add Store',
+              to : '/'
+            }
       ],
       miniVariant: false,
       right: true,
