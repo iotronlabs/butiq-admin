@@ -1,14 +1,14 @@
 <template>
 	<div>
 		<div class="align">
-			<v-chip small outline color="green">
-				<v-avatar class="student-color"> S </v-avatar>
-				Student
+			<v-chip small outline color="red">
+				<v-avatar class="student-color"> A </v-avatar>
+				Admin
 				<v-spacer />
 			</v-chip>
 		</div>
 		<br>
-		<LoginForm id = "store"/>
+		<LoginForm id = "admin"/>
 	</div>
 </template>
 
@@ -28,4 +28,3 @@ export default {
 }
 
 </style>
-
