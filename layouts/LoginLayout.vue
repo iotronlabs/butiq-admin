@@ -1,7 +1,7 @@
 <template>
 <v-app class="global-font">
     <v-content>
-        <v-container fluid fill-height class="container-grad">
+        <v-container fluid  class="container-grad">
             <v-layout align-center justify-center>
                 <v-flex xs12 sm8 md4>
                     <v-card class = "elevation-12 card-design">
