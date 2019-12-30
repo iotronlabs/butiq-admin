@@ -1,5 +1,5 @@
 <template>
-	<v-app :dark="dark" class="global-font">
+	<v-app :dark="dark" >
 		<v-navigation-drawer
 			v-model="primaryDrawer.model"
 			:permanent="primaryDrawer.type === 'permanent'"
@@ -11,7 +11,7 @@
 			app
 		>
 
-			<v-list>
+			<v-list shaped>
 				<div>
 					<v-layout row>
 						<v-flex xs10 sm10 md10 lg10>

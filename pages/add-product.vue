@@ -1,5 +1,5 @@
 <template>
-  <v-stepper v-model="e1" class="ma-2">
+  <v-stepper v-model="e1" class="ma-0">
     <v-stepper-header>
       <v-stepper-step :complete="e1 > 1" step="1">Product Details</v-stepper-step>
 
@@ -16,8 +16,8 @@
       <v-stepper-content step="1">
         <v-card  class="mb-12">
              <v-form >
-                <v-container fluid >
-                    <v-row class="ma-4">
+                <!-- <v-container fluid > -->
+                    <v-row class="ma-0">
                         <v-col cols="12"  >
                             <v-text-field
                                 v-model="name"
@@ -34,7 +34,7 @@
                         </v-col>
                         <v-col cols="12" >
                             
-                                    <v-color-picker  outlined class="" hide-inputs hide-canvas></v-color-picker>
+                          <v-color-picker  outlined class="" hide-inputs hide-canvas></v-color-picker>
                               
                         </v-col>
                          <v-col cols="12"  >
@@ -97,7 +97,7 @@
                             ></v-file-input>
                         </v-col>
                     </v-row>
-                </v-container>
+                <!-- </v-container> -->
              </v-form>
           </v-card>
 
@@ -109,7 +109,7 @@
         <v-card class="mb-12 mt-2" v-for="i in n" :key="i">
             <v-form >
                 <v-container  >
-                    <v-row class="mx-2">
+                    <v-row class="mx-0">
                         <v-col cols="10"   >
                             <v-text-field
                                 v-model="variation_type"
@@ -125,8 +125,8 @@
                         </v-col>
 
                     </v-row>
-                    <v-row class="mx-2" v-for="j in m" :key="j" >
-                        <v-col cols="1"></v-col>
+                    <v-row class="mx-0" v-for="j in m" :key="j" >
+                        <!-- <v-col cols="1"></v-col> -->
                         <v-col cols="10" md="3" lg="3" >
                             <v-text-field
                                 v-model="variation_name"
@@ -150,9 +150,9 @@
                                 outlined
                             ></v-text-field>
                         </v-col>
-                        <v-col cols="5" class="hidden-md-and-up"></v-col>
+                       
                         <v-col cols="1">
-                            <v-btn fab @click="m=m+1" small>
+                            <v-btn fab @click="m=m+1">
                                <v-icon>mdi-plus</v-icon>
                             </v-btn>
 
@@ -171,10 +171,11 @@
 
       <v-stepper-content step="3">
         <v-card class="mx-auto">
-            <v-container>
+            
                 <v-row align="center">
                     <v-col cols="12">
                         <v-select
+                            outlined
                             v-model="category"
                             :items="categories"
                             clearable
@@ -184,7 +185,7 @@
                         ></v-select>
                     </v-col>
                 </v-row>
-            </v-container>
+            
         </v-card>
 
         <v-btn

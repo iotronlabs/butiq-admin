@@ -1,12 +1,14 @@
 <template>
 	<div>
-		<div class="align">
-			<v-chip small outline color="green">
-				<v-avatar class="student-color"> S </v-avatar>
-				Student
-				<v-spacer />
+
+		<center>
+		<v-chip class="ma-2" color="#673AB7"
+	  text-color="#ffffff">
+				
+				Butiq Admin Login
+				
 			</v-chip>
-		</div>
+		</center>
 		<br>
 		<LoginForm id = "store"/>
 	</div>

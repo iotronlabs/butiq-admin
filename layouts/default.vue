@@ -1,5 +1,6 @@
 <template>
   <v-app dark>
+    
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -7,7 +8,7 @@
       fixed
       app
     >
-		<v-list >
+		<v-list shaped>
 
 			<div>
 				<v-layout row wrap>
@@ -33,8 +34,8 @@
 			</div>
       <br>
 			<hr>
-      		<v-list>
-				<v-list-item
+      <v-list>
+				<v-list-item color="primary"
 					v-for="(item, i) in items"
 					:key="i"
 					:to="item.to"
@@ -48,8 +49,11 @@
 						<v-list-item-title v-text="item.title" />
 					</v-list-item-content>
 				</v-list-item>
-      		</v-list>
+    	</v-list>
 		</v-list>
+    <br><br><br><br><br><br><br><br><br><br>
+    <v-btn block outlined class="white--text" color="primary"><v-icon>mdi-logout</v-icon> Logout</v-btn>
+    
     </v-navigation-drawer>
 
 
@@ -58,9 +62,21 @@
       fixed
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-	  <v-toolbar-title>Admin</v-toolbar-title>
-
+    
+    <v-row align="center">
+      <v-col cols="2">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      </v-col>
+      <v-col cols="2" offset="3" >
+        <v-toolbar-title><nuxt-link to="/dashboard"><v-img height="8vh" contain src="/butiq.png"/></nuxt-link></v-toolbar-title>
+      </v-col>
+      <v-col cols="1" offset="3">
+        <v-icon>mdi-account-circle</v-icon>
+      </v-col>
+      <v-col cols="1" >
+        <v-icon>notifications</v-icon>
+      </v-col>
+    </v-row>
     </v-app-bar>
 
 
@@ -92,35 +108,36 @@ export default {
       drawer: false,
       fixed: false,
       items: [
-        // {
-        //   icon: 'mdi-apps',
-        //   title: 'Welcome',
-        //   to: '/'
-        // },
-        // {
-        //   icon: 'mdi-chart-bubble',
-        //   title: 'Inspire',
-        //   to: '/inspire'
-        // }
+        {
+          icon: 'mdi-apps',
+          title: 'Dashboard',
+          to: '/dashboard'
+        },
+        
 
             {
+              icon:'settings',
               title : 'Configure',
-              to : '/'
+              to : '/configure/users'
               
             },
             {
+              icon:'mdi-format-list-checkbox',
               title : 'Category',
-              to : '/'
+              to : '/category-table'
             },
             {
+              icon:'mdi-tshirt-crew',
               title : 'Products',
-              to : '/'
+              to : '/add-product'
             },
             {
+              icon:'people',
               title : 'Users',
               to : '/'
             },
             {
+              icon:'mdi-cart',
               title : 'Add Store',
               to : '/'
             }

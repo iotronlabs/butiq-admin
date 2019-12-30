@@ -30,6 +30,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+     '~/plugins/particles'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -44,6 +45,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-material-design-icons',
   ],
   /*
   ** Axios module configuration
@@ -58,11 +60,21 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
+      light: true,
       themes: {
+        light: {
+          primary: colors.purple.base,
+          accent: colors.grey.darken2,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        },
         dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
+          primary: colors.purple.lighten2,
+          accent: colors.grey.lighten1,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,

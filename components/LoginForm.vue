@@ -26,13 +26,17 @@
         counter
         autocomplete="off"
         @click:append="show = !show">
-        
         </v-text-field>
-        &nbsp;&nbsp;<a href="#">forgot password?</a>
-		<v-checkbox
+		<v-row>
+			
+			<v-col cols="5"><v-checkbox 
+			
 			v-model="checkbox"
 			label="Remember Me"
-		></v-checkbox>
+			></v-checkbox></v-col>
+			<v-col cols="4" offset="3"><br>&nbsp;&nbsp;<nuxt-link to="#">forgot password?</nuxt-link></v-col>
+		</v-row>
+		
 
         <v-btn
         :disabled="disabled"
@@ -43,7 +47,7 @@
         :class="disabled ? 'btn-login' : 'btn-login-color'">
                 LogIn
         </v-btn>
-
+		<br>
     </v-form>
 
     <!-- snackbar -->
@@ -116,7 +120,7 @@ export default {
 }
 .btn-login-color {
 	border-radius: 10px;
-	background-image: linear-gradient(to top,#4e54c8 0%, #8f94fb 100%);
+	background-image: linear-gradient(to top,#673AB7 0%, #a283f0 100%);
 	color: aliceblue;
 }
 .btn-login {

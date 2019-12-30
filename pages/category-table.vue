@@ -20,7 +20,7 @@
                         <v-spacer></v-spacer>
                         <v-dialog v-model="dialog" max-width="500px">
                             <template v-slot:activator="{ on }">
-                                <v-btn color="primary" dark class="mb-2" v-on="on">Add Category</v-btn>
+                                <v-btn color="primary" dark class="mb-2" v-on="on"><v-icon>add</v-icon>&nbsp;Add Category</v-btn>
                             </template>
                             <v-card>
                                 <v-card-title>
@@ -73,7 +73,7 @@
                     </v-icon>
                 </template>
                 <template v-slot:no-data>
-                    <v-btn color="primary" @click="initialize">Reset</v-btn>
+                    <v-btn color="primary" @click="initialize"><v-icon>mdi-backup-restore</v-icon>&nbsp;&nbsp; Reset</v-btn>
                 </template>
              </v-data-table>
         </v-col>

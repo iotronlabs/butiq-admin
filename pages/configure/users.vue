@@ -4,33 +4,34 @@
     max-width="1000"
   >
       <v-card-title class="align justify-end ">
-        <v-flex xs12 sm12 md8 lg8>
+        <v-row>
+        <v-col cols="12" md="6">
             <v-text-field
-             v-model="search"
+            outlined
+            v-model="search"
             placeholder="Search"
             >
-             </v-text-field>
-       </v-flex>
-        <v-flex xs6 sm6 md2 lg2>
-            <v-btn class="ml-3 error"> Delete </v-btn>
-        </v-flex>
-        <!-- <v-flex xs6 sm6 md2 lg2>
-            <v-btn class="primary" >  Add New </v-btn>
-        </v-flex> -->
-
-        <template>
-            <v-dialog v-model="dialog"  max-width="1000px" >
-                <template v-slot:activator="{ on }">
-                    <v-flex xs6 sm6 md2 lg2>  
-                     <v-btn color="primary"  v-on="on">Add New</v-btn>
-                    </v-flex>
-                </template>
-                <UserForm />
-            </v-dialog>
-        </template>
+            </v-text-field>
+        </v-col>
+        <v-col cols="6" offset-md="1" md="2">
+         
+              <v-dialog v-model="dialog"  max-width="1000px" >
+                  <template v-slot:activator="{ on }">
+                    
+                    <v-btn color="primary"  v-on="on"><v-icon>add</v-icon>&nbsp;&nbsp;Add New</v-btn>
+                      
+                  </template>
+                  <UserForm />
+              </v-dialog>
+          
+        </v-col>
+        <v-col cols="6" md="2">
+            <v-btn class="ml-3 error"><v-icon>delete</v-icon>&nbsp;&nbsp; Delete </v-btn>
+        </v-col>
+        </v-row>
 
  </v-card-title>
-    <v-card>
+    <v-card flat class="px-6">
      <v-data-table
       :headers="headers"
       :items="users"
